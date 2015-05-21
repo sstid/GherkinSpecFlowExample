@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Hello World</title>
+	<link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body class="container">
+	<h1>Hello World</h1>
+	<input id="inputText" type="text" placeholder="Enter 'Success' to succeed." />
+	<button id="goButton">Go</button>
+	<h3 id="successLabel" class="hidden">Success</h3>
+	<h3 id="failureLabel" class="hidden">Failure</h3>
+	<script src="Scripts/jquery-2.1.4.min.js"></script>
+	<script src="Scripts/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$("#goButton").click(function () {
+				if ($("#inputText")[0].value === "Success") {
+					$("#failureLabel").addClass("hidden");
+					$("#successLabel").removeClass("hidden");
+					$("#successLabel").addClass("btn-success");
+				} else {
+					$("#successLabel").addClass("hidden");
+					$("#failureLabel").removeClass("hidden");
+					$("#failureLabel").addClass("btn-danger");
+				}
+			});
+		})
+	</script>
+</body>
+</html>
