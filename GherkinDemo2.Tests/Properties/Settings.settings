@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GherkinDemo2.Tests.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SeleniumImplicitWaitSeconds" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="SeleniumFindElementTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="SeleniumNavigationTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="SiteRoot" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:1316/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

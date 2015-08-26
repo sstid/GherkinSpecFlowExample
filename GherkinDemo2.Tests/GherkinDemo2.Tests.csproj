@@ -65,14 +65,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GherkinAndSpecFlowDemonstrationSteps.cs" />
-    <Compile Include="GherkinSpecFlowDemonstration.feature.cs">
+    <Compile Include="Behaviors\DemoSeleniumBaseClass.feature.cs">
+      <DependentUpon>DemoSeleniumBaseClass.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Behaviors\DemoSeleniumBaseClassSteps.cs" />
+    <Compile Include="Behaviors\GherkinAndSpecFlowDemonstrationSteps.cs" />
+    <Compile Include="Behaviors\GherkinSpecFlowDemonstration.feature.cs">
       <DependentUpon>GherkinSpecFlowDemonstration.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="iisExpressServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SeleniumBaseTest.cs" />
+    <Compile Include="SeleniumHelpers.cs" />
+    <Compile Include="TestApi\Context.cs" />
+    <Compile Include="TestApi\IShortSyntaxTestContext.cs" />
+    <Compile Include="TestApi\PageCommands.cs" />
+    <Compile Include="TestApi\Pages\BaseWebTestPage.cs" />
+    <Compile Include="TestApi\Pages\LoginPage.cs" />
+    <Compile Include="TestApi\Pages\SomeTestPage.cs" />
+    <Compile Include="TestApi\TestCleanupQueue.cs" />
+    <Compile Include="TestApi\Tools\ContextTools.cs" />
+    <Compile Include="TestApi\WorkflowsCommands.cs" />
+    <Compile Include="TestApi\Workflows\SecurityWorkflow.cs" />
+    <Compile Include="TestInitializationAndCleanup.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GherkinDemo2\GherkinDemo2.csproj">
@@ -82,12 +106,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
-    <None Include="GherkinSpecFlowDemonstration.feature">
+    <None Include="Behaviors\DemoSeleniumBaseClass.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DemoSeleniumBaseClass.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Behaviors\GherkinSpecFlowDemonstration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GherkinSpecFlowDemonstration.feature.cs</LastGenOutput>
     </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -56,7 +56,7 @@ namespace GherkinDemo2.Tests
 		{
 			if (_iisProcess != null)
 			{
-				_iisProcess.CloseMainWindow();
+			    if (!_iisProcess.HasExited) _iisProcess.CloseMainWindow();
 				_iisProcess.Dispose();
 			}
 		}
