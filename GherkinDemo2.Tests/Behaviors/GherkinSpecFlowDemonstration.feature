@@ -3,7 +3,7 @@
 	As a presenter
 	I want to automate a specification
 
-Scenario: Insert good text and validate
+Scenario: Fail this test on purpose to show what it looks like
 	Given I have entered the text "Good on ya"
 	When I submit the text
 	Then a success result should show

@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace GherkinDemo2.Tests
+namespace GherkinDemo2.Tests.Behaviors
 {
     using TechTalk.SpecFlow;
     
@@ -66,10 +66,10 @@ namespace GherkinDemo2.Tests
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Insert good text and validate")]
-        public virtual void InsertGoodTextAndValidate()
+        [NUnit.Framework.DescriptionAttribute("Fail this test on purpose to show what it looks like")]
+        public virtual void FailThisTestOnPurposeToShowWhatItLooksLike()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Insert good text and validate", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Fail this test on purpose to show what it looks like", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
